@@ -3,9 +3,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:weatherapp/bloc/weather_bloc_bloc.dart';
 import 'package:weatherapp/screens/home_screen.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
 void main() {
-  runApp(const MyApp());
+  initializeDateFormatting('id_ID', null).then((_) => runApp(const MyApp()));
+  
 }
 
 class MyApp extends StatelessWidget {
